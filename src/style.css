@@ -1,0 +1,331 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+
+
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+header ul {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+}
+.top-nav{
+    background: #042843;
+}
+.icon-logo{
+    width: 150px;
+    margin: 5px 30px;
+}
+
+.option-top-nav a{
+    width: 200px;
+    margin: 5px 30px;
+    display: flex;
+    flex-grow: row;
+    color: white;
+}
+.icon-option-top-nav{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+.search-input-container {
+    width: 550px;
+    margin: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid #dcdcdd;
+    background-color: rgba(255, 255, 255);
+}
+.search-input-container input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+.search-icon{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    background-image: url("./icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+.icon-top-nav{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+}
+.menu-nav{
+    background: #265C80;
+}
+.option-menu-nav a{
+    margin: 0px 15px;
+    padding: 0px 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.icon-cheuron{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+.icon-menu{
+    width: 40px;
+    height: 25px;
+    margin: 0px 15px;
+
+}
+
+body{
+    width: 100%;
+    background: #E5E5E5;
+
+}
+.second-container{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.container-product{
+    width: 644px;
+    height: 884px;
+    margin-right: 60px;
+    left: 0px;
+    top: 140px;
+    background: linear-gradient(180deg, rgba(253, 117, 81, 0.5) 16.67%, rgba(142, 68, 173, 0.5) 81.77%);
+    box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
+}
+
+/* */
+.container-information-card{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+
+
+.card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+.card-container .front-card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background: linear-gradient(106.15deg, #042843 1.98%, #726E9E 98%);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding: 10px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+.card-container .front-card img{
+    width: 20%;
+}
+.card-container .front-card .icon-chip{
+    width: 30%;
+    margin: -50px 10px 0 270px;
+}
+.card-container .front-card .card-number-box{
+    padding:30px 0 10px 0;
+    font-size: 22px;
+    color:#fff;
+}
+.card-container .front-card .flexbox{
+    display: flex;
+}
+.card-container .front-card .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+.card-container .front-card .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+
+
+
+
+.card-container .back-card{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(106.15deg, #042843 1.98%, #726E9E 98%);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.card-container .back-card .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.card-container .back-card .box{
+    padding: 0 20px;
+}
+
+.card-container .back-card .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.card-container .back-card .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-container .back-card .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+.information-card{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.information-card .inputBox{
+    margin-top: 20px;
+}
+
+.information-card .inputBox a{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.information-card .inputBox input,
+.information-card .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.information-card .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.information-card .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.button{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.information-card button{
+    width: 30%;
+    background:linear-gradient(45deg, rgb(10, 5, 61), #265C80);
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.information-card button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+
+
+.correct{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrong{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background: rgb(128, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
