@@ -32,7 +32,7 @@ El proyecto fue elaborado con la finalidad de apoyar a una tienda online (S-Shop
 
 ### 2.3 Elaboración de prototipo
 
-![imagen prototipo](icons/prototipo.jpeg)
+![imagen prototipo](icons/prototipo.png)
 
 
 ### 2.4 Feedback
