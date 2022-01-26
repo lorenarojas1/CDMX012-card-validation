@@ -1,133 +1,118 @@
-//import validator from './validator.js';
+import validator from './validator.js';
 
 //console.log(validator);
 
-document.querySelector('.form-number-card').oninput = () =>{
-    document.querySelector('.card-number-box').innerText = document.querySelector('.form-number-card').value;
+// Declarar variables del DOM
+const numberInputElement = document.querySelector(".form-number-card")
+const numberBoxElement = document.querySelector(".card-number-box")
+
+const nameInputElement = document.querySelector(".form-name-card")
+const nameBoxElement = document.querySelector(".card-holder-name")
+
+const monthInputElement = document.querySelector(".month-input")
+const monthBoxElement = document.querySelector(".exp-month")
+
+const yearInputElement = document.querySelector(".year-input")
+const yearBoxElement = document.querySelector(".exp-year")
+
+const cvvInputElement = document.querySelector(".cvv-card")
+const cvvBoxElement = document.querySelector(".cvv-box")
+
+const frontCardElement = document.querySelector(".front-card")
+const backCardElement = document.querySelector(".back-card")
+
+const validationtButton = document.querySelector(".validation-btn");
+const restarttButton = document.querySelector(".restart-btn");
+const messageValidationElement = document.getElementById("message-validation")
+
+//Incicializar eventos
+numberInputElement.addEventListener("input", addNumber)
+nameInputElement.addEventListener("input", addName)
+monthInputElement.addEventListener("input", addMonth)
+yearInputElement.addEventListener("input", addYear)
+cvvInputElement.addEventListener("input", addCvv)
+cvvInputElement.addEventListener("mouseenter", rotate1)
+cvvInputElement.addEventListener("mouseleave", rotate2)
+validationtButton.addEventListener("click", validationCard);
+restarttButton.addEventListener("click", clearInformation);
+
+
+
+//Funciones para agergar datos a la tarjeta
+function addNumber(){
+    numberBoxElement.innerText = numberInputElement.value;
+}
+function addName(){
+    nameBoxElement.innerText = nameInputElement.value;
+}
+function addMonth(){
+    monthBoxElement.innerText = monthInputElement.value;
+}
+function addYear(){
+    yearBoxElement.innerText = yearInputElement.value;
+}
+function addCvv(){
+    cvvBoxElement.innerText = cvvInputElement.value;
+}
+function rotate1(){
+    frontCardElement.style.transform = "perspective(1000px) rotateY(-180deg)";
+    backCardElement.style.transform = "perspective(1000px) rotateY(0deg)";
+}
+function rotate2(){
+    frontCardElement.style.transform = "perspective(1000px) rotateY(0deg)";
+    backCardElement.style.transform = "perspective(1000px) rotateY(180deg)";
 }
 
-document.querySelector('.form-name-card').oninput = () =>{
-    document.querySelector('.card-holder-name').innerText = document.querySelector('.form-name-card').value;
+//Funcion validar tarjeta y ocultar dígitos
+function validationCard() {
+
+    if(validator.isValid (numberInputElement.value) === true){
+        messageValidationElement.classList.remove('hide');
+        messageValidationElement.innerText = "Tarjeta Valida";
+        messageValidationElement.classList.add('correct');
+    }
+    else {
+        messageValidationElement.classList.remove('hide');
+        messageValidationElement.innerText = "Tarjeta Invalida";
+        messageValidationElement.classList.add('wrong');
+    }
+
+    numberBoxElement.innerText = validator.maskify(numberInputElement.value)
+    numberInputElement.value = validator.maskify(numberInputElement.value)
+
+    cvvInputElement.value = "***"
+    cvvBoxElement.innerText = "***"
+
+    restarttButton.innerText = "Validar otra tarjeta";
+    disabledButton();
 }
 
-document.querySelector('.month-input').oninput = () =>{
-    document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+function disabledButton() {
+    validationtButton.disabled = true;
+    validationtButton.classList.add('cursor-not-allowed')
 }
 
-document.querySelector('.year-input').oninput = () =>{
-    document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+function clearInformation(){
+
+    //limpiar información Inputs
+    numberInputElement.value ="";
+    nameInputElement.value ="";
+    monthInputElement.value ="month";
+    yearInputElement.value ="year";
+    cvvInputElement.value ="";
+
+    //Limpiar información tarjeta (box)
+    numberBoxElement.innerText = "#### - #### - #### - ####";
+    nameBoxElement.innerText ="APELLIDO";
+    monthBoxElement .innerText ="MM";
+    yearBoxElement.innerText = "YY";
+    cvvBoxElement.innerText = "";
+
+    messageValidationElement.innerText ="";
+    messageValidationElement.classList.add('hide');
+
+    validationtButton.disabled = false;
+    restarttButton.innerText = "Limpiar Datos";
 }
-
-document.querySelector('.cvv-card').onmouseenter = () =>{
-    document.querySelector('.front-card').style.transform = 'perspective(1000px) rotateY(-180deg)';
-    document.querySelector('.back-card').style.transform = 'perspective(1000px) rotateY(0deg)';
-}
-
-document.querySelector('.cvv-card').onmouseleave = () =>{
-    document.querySelector('.front-card').style.transform = 'perspective(1000px) rotateY(0deg)';
-    document.querySelector('.back-card').style.transform = 'perspective(1000px) rotateY(180deg)';
-}
-
-document.querySelector('.cvv-card').oninput = () =>{
-    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-card').value;
-}
-
-
-
-
-
-
-
-
-const numberCardElement = document.getElementById('number-card')
-const nameCardElement = document.getElementById('name-card')
-const validationtButton = document.getElementById('validation-btn')
-const numberElement = document.getElementById('number')
-const nameElement = document.getElementById('name')
-const messageValidationElement = document.getElementById('message-validation')
-
-
-validationtButton.addEventListener('click', validationCard)
-
-var number;
-var name;
-var t = 16;
-var card = [t];
-var sum=0;
-var sum1=0;
-var sum2=0;
-
-
-
-function validationCard(){
-  number = numberCardElement.value;
-  localStorage.setItem('number', number)
- // numberElement.innerText = localStorage.getItem('number');
-
-  name = nameCardElement.value;
-  localStorage.setItem('name', name)
-  //nameElement.innerText = localStorage.getItem('name');
-  algorithmLuhn ();
-};
-
-// 4137894711755904
-function algorithmLuhn (){
-
-  for(let i=0; i < number.length; i++){
-      card[i]=number[i] - 0;
-  }
-
-for(let i = t -1; i >= 0; i--){
-  var p;
-  var num = card[i];
-  console.log(num);
-  if(i % 2 == 0){
-      p=num*2;
-      if(p > 9){
-          p=p-9;
-          sum1=sum1+p;
-      }
-      else{
-          sum1=sum1+p;
-
-      }
-  }
-  else{
-      p=num;
-      sum2=sum2+p
-  }
-}
-
-sum=sum1+sum2;
-console.log("la suma es: " + sum)
-if(sum % 10 == 0){
-    console.log("Tajeta valida");
-    messageValidationElement.innerText = "Tarjeta Valida"
-    messageValidationElement.classList.add('correct')
-
-
-}
-else{
-    console.log("Tajeta invalida");
-    messageValidationElement.innerText = "Tarjeta inValida"
-    messageValidationElement.classList.add('wrong')
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

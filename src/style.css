@@ -3,24 +3,17 @@
     margin:0; padding:0;
     box-sizing: border-box;
 }
-
-:root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
-  }
-
-
-
-header nav{
-    display: flex;
-    justify-content: center;
+html{
+    width: 100%;
 }
+
+
+/*DISEÑO HEADER*/
 header ul {
     display: flex;
     flex-flow: row;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 header li {
@@ -31,6 +24,8 @@ header li {
 header a{
     text-decoration: none;
 }
+
+/*PRIMERA SECCIÓN HEADER*/
 .top-nav{
     background: #042843;
 }
@@ -38,10 +33,9 @@ header a{
     width: 150px;
     margin: 5px 30px;
 }
-
 .option-top-nav a{
-    width: 200px;
-    margin: 5px 30px;
+    width: 160px;
+    margin: 5px 15px;
     display: flex;
     flex-grow: row;
     color: white;
@@ -54,13 +48,13 @@ header a{
 }
 .search-input-container {
     width: 550px;
-    margin: 5px 30px;
+    margin: 5px 20px;
     border-radius: 20px;
     border: 1px solid #dcdcdd;
     background-color: rgba(255, 255, 255);
 }
 .search-input-container input {
-    width: 400px;
+    width: 375px;
     height: 50px;
     border: none;
     outline: none;
@@ -81,6 +75,8 @@ header a{
     margin: 10px;
     padding: 5px;
 }
+
+/*SEGUNDA SECCIÓN HEADER*/
 .menu-nav{
     background: #265C80;
 }
@@ -103,31 +99,66 @@ header a{
 
 }
 
+/*BODY*/
 body{
     width: 100%;
     background: #E5E5E5;
-
 }
+/*PRIMERA-SECCION(CHECKOUT)*/
+.fist-section{
+    height: 75px;
+    margin: 20px 0px;
+}
+.checkout-container{
+ width: 30%;
+ height: 80%;
+ background: #042843;
+ color: honeydew;
+ font-size: 35px;
+ font-weight: bold;
+ box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
+ display: flex;
+ justify-content: end;
+ align-items: center;
+}
+.checkout-container a{
+    margin-right: 20px;
+}
+
+/*SEGUNDA-SECCION*/
 .second-container{
+    margin-right: 60px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 
 }
-
+/*CONTENIDO DEL PRODUCTO*/
 .container-product{
-    width: 644px;
-    height: 884px;
-    margin-right: 60px;
-    left: 0px;
-    top: 140px;
+    min-width: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
     background: linear-gradient(180deg, rgba(253, 117, 81, 0.5) 16.67%, rgba(142, 68, 173, 0.5) 81.77%);
     box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
 }
+.description-product{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: honeydew;
+}
+.description-product a{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
 
-/* */
+/*INFORMACIÓN DE LA TARJETA*/
 .container-information-card{
     min-height: 100vh;
-    background: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,14 +166,14 @@ body{
     padding-bottom: 60px;
 }
 
-
-
+/*TARJETA BOX*/
 .card-container{
     margin-bottom: -150px;
     position: relative;
     height: 250px;
     width: 400px;
 }
+/*TARJETA BOX PARTE DE FRONTAL*/
 .card-container .front-card{
     position: absolute;
     height: 100%;
@@ -179,10 +210,7 @@ body{
     color:#fff;
 }
 
-
-
-
-
+/*TARJETA BOX PARTE DE ATRAS*/
 .card-container .back-card{
     position: absolute;
     top:0; left: 0;
@@ -197,23 +225,19 @@ body{
     transform:perspective(1000px) rotateY(180deg);
     transition:transform .4s ease-out;
 }
-
 .card-container .back-card .stripe{
     background: #000;
     width: 100%;
     margin: 10px 0;
     height: 50px;
 }
-
 .card-container .back-card .box{
     padding: 0 20px;
 }
-
 .card-container .back-card .box span{
     color:#fff;
     font-size: 15px;
 }
-
 .card-container .back-card .box .cvv-box{
     height: 50px;
     padding: 10px;
@@ -223,19 +247,12 @@ body{
     border-radius: 5px;
     width: 100%;
 }
-
 .card-container .back-card .box img{
     margin-top: 30px;
     height: 30px;
 }
 
-
-
-
-
-
-
-
+/*INPUTS DE INFORMACIÓN PARA LA TARJETA*/
 .information-card{
     background: #fff;
     border-radius: 5px;
@@ -244,42 +261,33 @@ body{
     width: 600px;
     padding-top: 160px;
 }
-
 .information-card .inputBox{
     margin-top: 20px;
 }
-
 .information-card .inputBox a{
     display: block;
     color:#999;
     padding-bottom: 5px;
 }
-
-.information-card .inputBox input,
-.information-card .inputBox select{
+.information-card .inputBox input, .information-card .inputBox select{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
     border:1px solid rgba(0,0,0,.3);
     color:#444;
 }
-
 .information-card .flexbox{
     display: flex;
     gap:15px;
 }
-
 .information-card .flexbox .inputBox{
     flex:1 1 150px;
 }
-
 .button{
     margin: 10px;
     display: flex;
     justify-content: center;
-
 }
-
 .information-card button{
     width: 30%;
     background:linear-gradient(45deg, rgb(10, 5, 61), #265C80);
@@ -291,14 +299,12 @@ body{
     cursor: pointer;
     transition: .2s linear;
 }
-
 .information-card button:hover{
     letter-spacing: 2px;
     opacity: .8;
 }
 
-
-
+/*MENSAJE DE VALIDACIÓN*/
 .correct{
     width: 100%;
     height: 50px;
@@ -309,7 +315,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .wrong{
     width: 100%;
     height: 50px;
@@ -320,6 +325,69 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.hide{
+    display: none;
+}
+
+button:disabled{
+    cursor: not-allowed;
+    background:linear-gradient(45deg, rgb(146, 191, 241), #99a9cc);
+    color:rgba(255, 255, 255, 0.726);
+}
+
+/*FOOTER*/
+footer ul {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+footer li {
+    display: inline;
+    padding-left:3px;
+    padding-right:3px;
+}
+footer a, span{
+    text-decoration: none;
+    color: white;
+    }
+
+/*FOOTER PRIMERA SECCIÓN*/
+.fist-section-footer{
+    margin-top: 20px;
+    height: 150px;
+    background: #265C80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container-footer{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/*FOOTER - SECCIÓN SECCIÓN*/
+.second-section-footer{
+    height: 65px;
+    background: #042843;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 800px) {
+    
+}
+
 
 
 

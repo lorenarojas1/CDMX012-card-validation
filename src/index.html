@@ -8,160 +8,203 @@
   </head>
   <body>
     <header class="header">
-        <nav class="top-nav">
-            <ul>
-               <li class="logo-top-nav"><img class="icon-logo" src="./icons/logo.png"></li> 
-               <li class="option-top-nav">
-                   <a href=""><span><img class="icon-option-top-nav"src="./icons/location.svg"></span>
-                    <span>Hola<br>elige tu dirección</span></a></li> 
-               <li class="option-top-nav"><a href=""><span><img class="icon-option-top-nav" src="./icons/send.svg"></span>
-                 <span>Devoluciones<br> y Pedidos</span></a></li> 
-               <li class="search-input-container"><a href="" class="search-icon"></a><input type="text" id="buscador" placeholder="Buscar en S Shop" autocomplete="Buscador" required ></li> 
-               <li ><a href=""><img class="icon-top-nav" src="./icons/favorite.svg"></a></li>
-               <li><a href=""><img class="icon-top-nav" src="./icons/shopping-cart.svg"> </a></li>
-               <li><a href=""><img class="icon-top-nav" src="./icons/notification.svg"> </a></li>
-               <li><a href=""><img class="icon-top-nav" src="./icons/user.svg"></a></li>
-            </ul>
-        </nav>
-        <nav class="menu-nav">
-            <ul>
-                <li class="option-menu-nav"><a href=""><span><img class="icon-menu" src="./icons/menu.svg"></span>
-                    <span>Todo</span></a></li> 
-                <li class="option-menu-nav"><a href=""><span>Departamentos</span>
-                    <span><img class="icon-cheuron" src="./icons/cheuron.svg"></span></a></li> 
-                <li class="option-menu-nav"><a href=""><span>Lo + Vendido</span>
-                    <span><img class="icon-cheuron" src="./icons/cheuron.svg"></span></a></li>
-                <li class="option-menu-nav"><a href="">Novedades<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
-                <li class="option-menu-nav"><a href="">Servicio al Cliente<img class="icon-cheuron" src="./icons/cheuron.svg"> </a></li>
-                <li class="option-menu-nav"><a href="">Comprar de nuevo<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
-                <li class="option-menu-nav"><a href="">Contacto<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
-             </ul>
+
+      <!--HEADER / PRIMERA BARRA DE NAVEGACIÓN-->
+      <nav class="top-nav">
+        <ul>
+          <li class="logo-top-nav"><img class="icon-logo" src="./icons/logo.png"></li>
+          <li class="option-top-nav"><a href="#"><span><img class="icon-option-top-nav" src="./icons/location.svg"></span>
+            <span>Hola<br>elige tu dirección</span></a></li>
+          <li class="option-top-nav"><a href="#"><span><img class="icon-option-top-nav" src="./icons/send.svg"></span>
+            <span>Devoluciones<br> y Pedidos</span></a></li>
+          <li class="search-input-container"><a href="" class="search-icon"></a>
+            <input type="text" id="buscador" placeholder="Buscar en S Shop" autocomplete="Buscador" required ></li>
+          <li ><a href="#"><img class="icon-top-nav" src="./icons/favorite.svg"></a></li>
+          <li><a href="#"><img class="icon-top-nav" src="./icons/shopping-cart.svg"> </a></li>
+          <li><a href="#"><img class="icon-top-nav" src="./icons/notification.svg"> </a></li>
+          <li><a href="#"><img class="icon-top-nav" src="./icons/user.svg"></a></li>
+        </ul>
+      </nav>
+
+      <!--HEADER / SEGUNDA BARRA DE NAVEGACIÓN-->
+      <nav class="menu-nav">
+        <ul>
+          <li class="option-menu-nav"><a href="#"><span><img class="icon-menu" src="./icons/menu.svg"></span>
+            <span>Todo</span></a></li>
+          <li class="option-menu-nav"><a href="#"><span>Departamentos</span>
+            <span><img class="icon-cheuron" src="./icons/cheuron.svg"></span></a></li>
+          <li class="option-menu-nav"><a href="#"><span>Lo + Vendido</span>
+            <span><img class="icon-cheuron" src="./icons/cheuron.svg"></span></a></li>
+          <li class="option-menu-nav"><a href="#">Novedades<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
+          <li class="option-menu-nav"><a href="#">Servicio al Cliente<img class="icon-cheuron" src="./icons/cheuron.svg"> </a></li>
+          <li class="option-menu-nav"><a href="#">Comprar de nuevo<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
+          <li class="option-menu-nav"><a href="#">Contacto<img class="icon-cheuron" src="./icons/cheuron.svg"></a></li>
+        </ul>
         </nav>
     </header>
+
     <main>
-        <section class="fist-section">
-            <div class="checkout-container">
-                <a>Checkout</a>
-            </div>
-        </section>
-
-
-
-        <section class="second-container">
-            <div class="container-product">
-              <div>
-                <img src="./icons/huawei-p40-sin-fondo.png">
-              </div>
-              <div>
-                <a>XAOMI REDMI NOTE 10</a>
-                <a>$300 USD</a>
-              </div>
-            </div>
-
-        <div class="container-information-card"> 
-
-          <div class="card-container">
-                  <div class="front-card">
-
-                    <div class="image">
-                      <img class="icon-mastercard" src="icons/mastercard.svg">
-                  </div>
-                      <div  id="number" class="card-number-box">#### - #### - #### - ####</div>
-                      <div class="image">
-                        <img class="icon-chip" src="./icons/chip.svg">
-                    </div>
-                    <div class="flexbox">
-                      <div class="box">
-                        <span>NAME</span>
-                        <div id="name" class="card-holder-name">FULL NAME</div>
-                    </div>
-                    <div class="box">
-                        <span>DATE</span> 
-                        <div class="expiration">
-                        <span class="exp-month">MM</span> 
-                        <span class="exp-year">YY</span>
-                      </div>
-                    </div>
-                    </div>
-
-
-                  </div>
-
-                  <div class="back-card">
-                    <div class="stripe"></div>
-                    <div class="box">
-                        <span>cvv</span>
-                        <div class="cvv-box"></div>
-                        <img src="./icons/mastercard.svg" alt="">
-                    </div>
-                </div>
-
-
-
-              </div>
-
-                <div class="information-card"> 
-                        <div class="inputBox">
-                            <a>CARD NUMBER:</a><br>
-                            <input type="text" name="number-card" id="number-card" class="form-number-card" autocomplete="Número de la tarjeta" placeholder="Ingresa los 16 dígitos de tu tarjeta"  maxlength="16" required>
-                        </div>
-                        <div class="inputBox"> 
-                            <a>CARD HOLDER NAME:</a><br>
-                            <input type="text" name="name-card" id="name-card" class="form-name-card" autocomplete="Nombre de la tarjeta" placeholder="Ingresa tu nombre" required>
-                        </div>
-                        <div class="flexbox">
-                            <div class="inputBox"> 
-                                <a>EXPIRATION MM:</a><br>
-                                <select name="" id="" class="month-input">
-                                  <option value="month" selected disabled>MONTH</option>
-                                  <option value="01">01</option>
-                                  <option value="02">02</option>
-                                  <option value="03">03</option>
-                                  <option value="04">04</option>
-                                  <option value="05">05</option>
-                                  <option value="06">06</option>
-                                  <option value="07">07</option>
-                                  <option value="08">08</option>
-                                  <option value="09">09</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                              </select>
-                            </div>
-                            <div class="inputBox"> 
-                                <a>EXPIRATION YY:</a><br>
-                                <select name="" id="" class="year-input">
-                                  <option value="year" selected disabled>YEAR</option>
-                                  <option value="2021">2021</option>
-                                  <option value="2022">2022</option>
-                                  <option value="2023">2023</option>
-                                  <option value="2024">2024</option>
-                                  <option value="2025">2025</option>
-                                  <option value="2026">2026</option>
-                                  <option value="2027">2027</option>
-                                  <option value="2028">2028</option>
-                                  <option value="2029">2029</option>
-                                  <option value="2030">2030</option>
-                              </select>
-                            </div>
-                            <div class="inputBox"> 
-                              <a>CVV:</a><br>
-                              <input type="text" name="cvv-card" id="cvv-card" class="cvv-card" maxlength="3" required>
-                          </div>
-                          </div>
-                            <div id="message-validation" >
-                            </div>
-                        
-                        <div class="button">
-                                <button type="submit" id="validation-btn" class="validation-btn btn">Validation</button>
-                                <button type="submit" id="restart-btn" class="restart-btn btn">Restart</button>
-                        </div>
-                    </div>
+      <!--MAIN / MENSAJE CHECKOUT-->
+      <section class="fist-section">
+        <div class="checkout-container">
+          <a>Checkout</a>
         </div>
-    </section>
+      </section>
 
+      <!--MAIN / CONTENEDOR DEL PRODUCTO-->
+      <section class="second-container">
+        <div class="container-product">
+          <div>
+            <img src="./icons/huawei-p40-sin-fondo.png">
+          </div>
+          <div class="description-product">
+            <a>XAOMI REDMI NOTE 10</a>
+            <a>$300 USD</a>
+          </div>
+        </div>
+
+        <!--MAIN / INFORMACIÓN TARJETA-->
+        <div class="container-information-card">
+          <div class="card-container">
+
+          <!--CARA DE LA TARJETA-->
+            <div class="front-card">
+              <div class="image">
+                <img class="icon-mastercard" src="icons/mastercard.svg">
+              </div>
+              <div  id="number" class="card-number-box">#### - #### - #### - ####</div>
+              <div class="image">
+                <img class="icon-chip" src="./icons/chip.svg">
+              </div>
+              <div class="flexbox">
+                <div class="box">
+                  <span>NOMBRE</span>
+                  <div id="name" class="card-holder-name">APELLIDO</div>
+                </div>
+                <div class="box">
+                  <span>FECHA</span>
+                  <div class="expiration">
+                    <span class="exp-month">MM</span>
+                    <span class="exp-year">YY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--PARTE DE ATRÁS DE LA TARJETA-->
+            <div class="back-card">
+              <div class="stripe"></div>
+              <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="./icons/mastercard.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!--INPUTS PARA DATOS DE LA TARJETA-->
+          <div class="information-card">
+            <div class="inputBox">
+              <a>NÚMERO DE TARJETA:</a><br>
+              <input type="text" name="number-card" id="number-card" class="form-number-card" autocomplete="Número de la tarjeta" placeholder="Ingresa los 16 dígitos de tu tarjeta"  maxlength="16" required>
+            </div>
+
+            <div class="inputBox">
+              <a>NOMBRE:</a><br>
+              <input type="text" name="name-card" id="name-card" class="form-name-card" autocomplete="Nombre de la tarjeta" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="flexbox">
+              <div class="inputBox">
+                <a>MES VIGENCIA:</a><br>
+                <select name="" id="" class="month-input">
+                  <option value="month" selected disabled>MES</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+
+              <div class="inputBox">
+                <a>AÑO VIGENCIA:</a><br>
+                <select name="" id="" class="year-input">
+                  <option value="year" selected disabled>AÑO</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+              </div>
+
+              <div class="inputBox">
+                <a>CVV:</a><br>
+                <input type="text" name="cvv-card" id="cvv-card" class="cvv-card" maxlength="3" required>
+              </div>
+            </div>
+
+            <div id="message-validation"></div>
+
+            <div class="button">
+              <button type="submit" id="validation-btn" class="validation-btn">Validar</button>
+              <button type="submit" id="restart-btn" class="restart-btn btn">Limpiar Datos</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-     <script src="index.js"></script>
+
+    <footer>
+      <!--FOOTER PRIMERA SECCIÓN-->
+      <section class="fist-section-footer">
+        <div>
+          <div class="icon-container-footer"><img class="icon-logo" src="./icons/logo.png"></div>
+          <div>
+            <ul>
+              <li><a href="">Australia</a></li>
+              <li><span> | </span><a href="#">Alemania</a></li>
+              <li><span> | </span><a href="#">Brasil</a></li>
+              <li><span> | </span><a href="#">Canadá</a></li>
+              <li><span> | </span><a href="#">China</a></li>
+              <li><span> | </span><a href="#">España</a></li>
+              <li><span> | </span><a href="#">Estados Unidos</a></li>
+              <li><span> | </span><a href="#">Francia</a></li>
+              <li><span> | </span><a href="#">India</a></li>
+              <li><span> | </span><a href="#">Italia</a></li>
+              <li><span> | </span><a href="#">Japón </a></li>
+              <li><span> | </span><a href="#">Países/Regiones Bajos</a></li>
+              <li><span> | </span><a href="#">Reino Unido</a></li>
+              <li><span> | </span><a href="#">Singapur</a></li>
+              <li><span> | </span><a href="#">Turquía</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--FOOTER SEGUNDA SECCIÓN-->
+      <section class="second-section-footer">
+        <div>
+          <ul>
+            <li><a href="">Condiciones de Uso</a></li>
+            <li><span> | </span><a href="#">Aviso de Privacidad</a></li>
+            <li><span> | </span><a href="#"> © 2022, Lorena Rojas</a></li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  <script type="module" src="index.js"></script>
   </body>
 </html>
