@@ -7,7 +7,6 @@ html{
     width: 100%;
 }
 
-
 /*DISEÑO HEADER*/
 header ul {
     display: flex;
@@ -96,7 +95,6 @@ header a{
     width: 40px;
     height: 25px;
     margin: 0px 15px;
-
 }
 
 /*BODY*/
@@ -106,7 +104,7 @@ body{
 }
 /*PRIMERA-SECCION(CHECKOUT)*/
 .fist-section{
-    height: 75px;
+    height: 100px;
     margin: 20px 0px;
 }
 .checkout-container{
@@ -116,6 +114,7 @@ body{
  color: honeydew;
  font-size: 35px;
  font-weight: bold;
+ border-radius: 0 5px 5px 0;
  box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
  display: flex;
  justify-content: end;
@@ -127,20 +126,20 @@ body{
 
 /*SEGUNDA-SECCION*/
 .second-container{
-    margin-right: 60px;
     display: flex;
     justify-content: space-between;
-
 }
+
 /*CONTENIDO DEL PRODUCTO*/
 .container-product{
-    min-width: 70vh;
+    width: 75%;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     background: linear-gradient(180deg, rgba(253, 117, 81, 0.5) 16.67%, rgba(142, 68, 173, 0.5) 81.77%);
-    box-shadow: 7px 0px 12px rgba(192, 57, 43, 0.35);
 }
 .description-product{
     margin-top: 20px;
@@ -158,17 +157,16 @@ body{
 
 /*INFORMACIÓN DE LA TARJETA*/
 .container-information-card{
-    min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    padding-bottom: 60px;
 }
 
 /*TARJETA BOX*/
 .card-container{
-    margin-bottom: -150px;
+    margin-bottom: -320px;
     position: relative;
     height: 250px;
     width: 400px;
@@ -254,27 +252,28 @@ body{
 
 /*INPUTS DE INFORMACIÓN PARA LA TARJETA*/
 .information-card{
+    width: 65%;
+    margin-top: 30px;
+    padding: 30px;
+    padding-top: 350px;
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
-    padding: 20px;
-    width: 600px;
-    padding-top: 160px;
+    border-radius: 10px ;
+    border: solid rgb(42, 2, 107) ;
+    box-shadow: 0 10px 15px #464b865e;
 }
 .information-card .inputBox{
     margin-top: 20px;
 }
 .information-card .inputBox a{
     display: block;
-    color:#999;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 .information-card .inputBox input, .information-card .inputBox select{
     width: 100%;
     padding: 10px;
-    border-radius: 10px;
-    border:1px solid rgba(0,0,0,.3);
-    color:#444;
+    border-radius: 5px;
+    border:1px solid;
 }
 .information-card .flexbox{
     display: flex;
@@ -297,11 +296,6 @@ body{
     color:#fff;
     border-radius: 10px;
     cursor: pointer;
-    transition: .2s linear;
-}
-.information-card button:hover{
-    letter-spacing: 2px;
-    opacity: .8;
 }
 
 /*MENSAJE DE VALIDACIÓN*/
@@ -380,7 +374,7 @@ footer a, span{
 
 
 
-@media (min-width: 600px) {
+@media (min-width: 600px){
 
 }
 

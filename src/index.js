@@ -31,7 +31,7 @@ nameInputElement.addEventListener("input", addName)
 monthInputElement.addEventListener("input", addMonth)
 yearInputElement.addEventListener("input", addYear)
 cvvInputElement.addEventListener("input", addCvv)
-cvvInputElement.addEventListener("mouseenter", rotate1)
+cvvInputElement.addEventListener("input", rotate1)
 cvvInputElement.addEventListener("mouseleave", rotate2)
 validationtButton.addEventListener("click", validationCard);
 restarttButton.addEventListener("click", clearInformation);
